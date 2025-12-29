@@ -1,0 +1,250 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: #e5e5e5;
+  font-family: "Courier New", monospace;
+  min-height: 100vh;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  color: #ff3b3b;
+  animation: glow 2s infinite alternate;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  display: grid;
+  gap: 25px;
+}
+
+/* =====================
+   CARD (GLASS STYLE)
+===================== */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  animation: fadeUp 0.8s ease;
+}
+
+/* =====================
+   TEXTAREA
+===================== */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-top: 10px;
+  background: #0b0b0b;
+  color: #00ff9c;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #555;
+}
+
+/* =====================
+   BUTTON
+===================== */
+button {
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #ff3b3b, #b30000);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,59,59,0.4);
+}
+
+/* =====================
+   BLOCKS
+===================== */
+.block {
+  margin-top: 20px;
+}
+
+.block h3 {
+  margin-bottom: 8px;
+  color: #ff6b6b;
+  font-size: 1.1rem;
+}
+
+.block ul {
+  list-style: none;
+}
+
+.block ul li {
+  margin: 6px 0;
+  padding-left: 10px;
+  border-left: 2px solid #ff3b3b;
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* =====================
+   SUSPECT GRID
+===================== */
+.suspect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.suspect-card {
+  background: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.3);
+  border-radius: 12px;
+  padding: 15px;
+  animation: pop 0.5s ease forwards;
+}
+
+.suspect-card h4 {
+  color: #ff4d4d;
+}
+
+.suspect-card p {
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* =====================
+   HISTORY
+===================== */
+.history-list {
+  display: grid;
+  gap: 10px;
+}
+
+.history-item {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid #ff3b3b;
+  animation: fadeUp 0.4s ease;
+}
+
+.muted {
+  color: #777;
+}
+
+/* =====================
+   LOADING
+===================== */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255,255,255,0.1);
+  border-top: 4px solid #ff3b3b;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* =====================
+   HELPERS
+===================== */
+.hidden {
+  display: none;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff3b3b;
+  }
+  to {
+    text-shadow: 0 0 20px #ff3b3b;
+  }
+}
