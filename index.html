@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Crime Scene Investigator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>🕵️ AI Crime Scene Investigator</h1>
+    <p>AI-powered crime analysis & investigation simulator</p>
+  </header>
+
+  <!-- MAIN APP -->
+  <main class="container">
+
+    <!-- CRIME INPUT PANEL -->
+    <section class="card">
+      <h2>📝 New Crime Case</h2>
+
+      <label>Crime Description</label>
+      <textarea id="crimeInput"
+        placeholder="Example: Laptop stolen at night, no forced entry, door unlocked...">
+      </textarea>
+
+      <button id="analyzeBtn">🔍 Analyze Crime</button>
+    </section>
+
+    <!-- LOADING / AI THINKING -->
+    <section id="loading" class="card hidden">
+      <h2>🤖 AI is Analyzing...</h2>
+      <div class="loader"></div>
+    </section>
+
+    <!-- AI ANALYSIS RESULT -->
+    <section id="analysis" class="card hidden">
+      <h2>🧠 AI Investigation Report</h2>
+
+      <div class="block">
+        <h3>📌 Summary</h3>
+        <p id="summary"></p>
+      </div>
+
+      <div class="block">
+        <h3>🧾 Key Clues</h3>
+        <ul id="clues"></ul>
+      </div>
+
+      <div class="block">
+        <h3>👥 Suspect Risk Analysis</h3>
+        <div id="suspects" class="suspect-grid"></div>
+      </div>
+
+      <div class="block">
+        <h3>⏱️ Timeline Reconstruction</h3>
+        <ul id="timeline"></ul>
+      </div>
+
+      <div class="block">
+        <h3>➡️ Next Investigation Steps</h3>
+        <ul id="nextSteps"></ul>
+      </div>
+    </section>
+
+    <!-- CASE HISTORY -->
+    <section class="card">
+      <h2>🗂️ Case History</h2>
+      <div id="caseHistory" class="history-list">
+        <p class="muted">No cases yet</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>⚠️ Educational & fictional AI crime investigation simulator</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
